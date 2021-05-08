@@ -58,7 +58,7 @@ fn main() {
                                 actual_to_path = actual_to_path.parent().unwrap_or(&actual_to_path).to_path_buf();
                             }
                         }
-                        println!("actual path: {}", &actual_to_path.display());
+                        //println!("actual path: {}", &actual_to_path.display());
                         match copy_items(&[&p], &actual_to_path, &options) {
                             Ok(t) => println!("Copied {} bytes from {} to {}", t, &p.display(), &actual_to_path.display()),
                             Err(e) => println!("Error copying: {:?}", e)
